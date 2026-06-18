@@ -15,8 +15,10 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "chromedriver": "^145.0.6",
     "jest": "^30.0.5",
     "nodemon": "^3.1.10",
+    "selenium-webdriver": "^4.45.0",
     "supertest": "^7.1.1"
   }
 }
