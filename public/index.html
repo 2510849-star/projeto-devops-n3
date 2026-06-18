@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Projeto DevOps N3</title>
+  <meta charset="UTF-8" />
+  <title>Projeto DevOps N3</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f6f0f7; color:#23152b; }
+    header { background:linear-gradient(135deg,#1b0626,#8e2d87,#e83e8c); color:white; padding:35px; text-align:center; }
+    header h1 { margin:0; font-size:36px; }
+    header p { margin-top:10px; font-size:18px; }
+    main { padding:35px; }
+    .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:30px; }
+    .card { background:white; border-radius:16px; padding:25px; box-shadow:0 6px 18px #0001; }
+    .card h3 { margin-top:0; color:#8e2d87; }
+    .card strong { font-size:28px; color:#e83e8c; }
+    table { width:100%; background:white; border-radius:16px; overflow:hidden; border-collapse:collapse; box-shadow:0 6px 18px #0001; }
+    th,td { padding:16px; border-bottom:1px solid #eee; text-align:left; }
+    th { background:#8e2d87; color:white; }
+    .status { margin-top:30px; background:#e8fff0; padding:18px; border-radius:14px; color:#087a2f; font-weight:bold; }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>Estela Cosméticos</h1>
+    <p>Projeto DevOps N3 — Node.js, Express, GitHub Actions e AWS EC2</p>
+  </header>
 
-<h1>Projeto DevOps N3</h1>
+  <main>
+    <div class="cards">
+      <div class="card"><h3>Total vendido</h3><strong>R$ 2.450,00</strong></div>
+      <div class="card"><h3>Vendas</h3><strong>24</strong></div>
+      <div class="card"><h3>Produtos</h3><strong>32</strong></div>
+      <div class="card"><h3>Clientes</h3><strong>18</strong></div>
+    </div>
 
-<p>Sistema de Cosméticos</p>
+    <h2>Produtos em destaque</h2>
+    <table>
+      <tr><th>Produto</th><th>Categoria</th><th>Preço</th><th>Status</th></tr>
+      <tr><td>Shampoo Reconstrutor</td><td>Cabelos</td><td>R$ 89,90</td><td>Em estoque</td></tr>
+      <tr><td>Hidratante Facial</td><td>Rosto</td><td>R$ 59,90</td><td>Em estoque</td></tr>
+      <tr><td>Perfume Floral</td><td>Perfumaria</td><td>R$ 199,90</td><td>Em estoque</td></tr>
+      <tr><td>Máscara Capilar</td><td>Tratamento</td><td>R$ 79,90</td><td>Estoque baixo</td></tr>
+    </table>
 
-<p>Aplicação Node.js utilizando Express.</p>
-
+    <div class="status">
+      ✅ Aplicação publicada na AWS EC2 com Nginx e Node.js
+    </div>
+  </main>
 </body>
 </html>
