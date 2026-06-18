@@ -1,0 +1,25 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy na EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 18.222.57.226
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/projeto-devops-n3
+            git pull origin develop
+            npm install
+            pkill -f "node src/server.js" || true
+            nohup npm start > app.log 2>&1 &
+            sudo systemctl restart nginx
