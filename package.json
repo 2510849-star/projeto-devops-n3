@@ -1,0 +1,22 @@
+{
+  "name": "projeto-devops-n3",
+  "version": "1.0.0",
+  "description": "Projeto DevOps N3",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "lint": "node --check src/server.js && node --check src/app.js"
+  },
+  "author": "Luan Martins Sastre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1"
+  }
+}
